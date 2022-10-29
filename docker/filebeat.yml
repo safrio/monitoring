@@ -1,0 +1,22 @@
+filebeat:
+  inputs:
+    - type: log
+      # ignore_older: -1
+      scan_frequency: 5s
+      # harvester_limit: 3
+      close_inactive: 24h
+      json:
+        message_key: message
+        keys_under_root: true
+      paths:
+        - /var/log/ads/app.log
+        - /var/log/auth/app.log
+        - /var/log/geocoder/app.log
+setup:
+  kibana:
+    host: "http://kibana:5601"
+output.logstash:
+  hosts: ["logstash:5044"]
+# output:
+#   elasticsearch:
+#     hosts: "http://elasticsearch:9200"

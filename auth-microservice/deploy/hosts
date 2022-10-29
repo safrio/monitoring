@@ -1,0 +1,8 @@
+[app]
+safrio-pg
+
+[db]
+safrio-pg
+
+[all:vars]
+ansible_user=deploy

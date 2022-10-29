@@ -1,0 +1,18 @@
+app:
+  name: auth
+  secret: secret
+db:
+  adapter: postgresql
+  host: localhost
+  user: safrio
+  url: <%= ENV['AUTH_DATABASE_URL'] %>
+pagination:
+  page_size: 10
+rabbitmq:
+  host: <%= ENV['RABBITMQ_HOST'] %>
+  username: <%= ENV['RABBITMQ_USER'] %>
+  password: <%= ENV['RABBITMQ_PASSWORD'] %>
+  consumer_pool: 10
+logger:
+  path: log/app.log
+  level: info

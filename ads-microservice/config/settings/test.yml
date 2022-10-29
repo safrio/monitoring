@@ -1,0 +1,3 @@
+db:
+  database: ads_microservice_test
+  max_connections: 1
